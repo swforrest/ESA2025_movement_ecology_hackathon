@@ -32,10 +32,14 @@ abstract: |
   
 ---
 
-First, it will be helpful to access the full code repository for this workshop. There are a couple ways to do this.
+It will be helpful to access the full repository for this workshop, for the data, covariates and any template scripts to get started. There are a couple ways to do this.
 
 1. **Fork the repository on GitHub**:
-Go to the GitHub page for this repository: <https://github.com/swforrest/ESA2025_animal_movement_workshop>
+This requires having a GitHub account.
+
+Go to the GitHub page for the repository: <https://github.com/swforrest/ESA2025_animal_movement_workshop>
+
+Click on the "Fork" button at the top right of the page. This will create a copy of the repository in your own GitHub account.
 
 2. **Download the repository as a ZIP file**:
 You can do this by clicking on the green "Code" button at the top right of the GitHub page and selecting "Download ZIP". Once downloaded, unzip the file to a location on your computer where you can easily find it.
