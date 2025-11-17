@@ -8,4 +8,4 @@ This repository is licensed with an MIT license (details below), and the DOI for
 
 You can cite this repository using the following citation:
 
-
+Forrest S., Meisuria, N., Cairncross, R., Fuik-Burgemeestre, S., Bentley, L., Cowan, M., & Newsome, T. (2025). swforrest/ESA2025_movement_ecology_hackathon: Workshop release (v1.0). Zenodo. https://doi.org/10.5281/zenodo.17635592
