@@ -17,6 +17,7 @@ website:
       - data_study_system.qmd
       - research_questions.qmd
       - methods.qmd
+      - data_preparation.qmd
       
     right:
       - icon: github
