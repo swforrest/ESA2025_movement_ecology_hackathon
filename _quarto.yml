@@ -27,7 +27,7 @@ website:
         style: floating
         contents: 
           - methods.qmd
-          - methods_scripts/general_resources.qmd
+          # - methods_scripts/general_resources.qmd
           - methods_scripts/home_ranges.qmd
           - methods_scripts/hmm.qmd
           - methods_scripts/ssf.qmd

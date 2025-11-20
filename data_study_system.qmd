@@ -32,12 +32,50 @@ abstract: |
   
 ---
 
-# Dingo (*Canis lupus dingo*) 
+## Dingo (*Canis lupus dingo*) 
 
 > Dingoes (Canis  lupus  dingo) most likely arrived in Australia on boats from Asia at least 4,000 years ago [1–3].
 Sometime after their  introduction  and  adoption  by  indigenous  Australians, dingoes became feral and have since occupied nearly every terrestrial habitat on the mainland [4]. Dingoes, like free-roaming dogs elsewhere, interact with humans and the water and food resources they provide either purposely or accidentally though refuse and artificial water points [5].
 
 *From Newsome et al. [-@Newsome2013-ya].*
+
+## Tanami Desert
+
+![](images/tanami_desert.png)
+
+## Mines in the Tanami Desert
+
+The mines, and the artificial food and water resources they provide in the Tanami Desert, offer a natural experiment to examine dingo behavioural responses.
+
+> The study region, covering approximately 18,000 km^2 in the western portion of central Australia’s Tanami Desert (130 deg 189E, 20 deg 309 S), was delimited by the perimeter of all GPS fixes that were obtained from collars fitted to dingoes between April 2008 and April 2010 (Figure 1). Land-use in the study region includes gold mining operations and pastoral activities. Mining operations are located at The Granites and Dead Bullock Soak (DBS). Disused gold mines with open-cut pits and no human occupation are located at Windy Hill and Tanami Mine, and cattle are kept on Tanami Downs. At the time of this study, there were 13 human-provided watering points permanently available to dingoes (Figure 1). Also available to dingoes were large quantities of food scraps within refuse facilities at The Granites and to a lesser extent at DBS. A roadhouse is located at Rabbit Flat and a farm house is occupied by pastoral workers on Tanami Downs. A series of major and minor tracks associated with both pastoral and mining operations exists throughout the study region (Figure 1).
+
+*From Newsome et al. [-@Newsome2013-ya].*
+
+#### Mine sites
+- Food resources for dingoes are spatially clumped and very rich 
+- Can lead to increased interactions with humans and possibly each other 
+
+#### Spatially distant areas (non-mine sites)
+- Food resources are naturally dispersed and relatively sparse
+
+## GPS data collection
+
+![Dingo GPS data collection area](images/data_collection_map.png)
+
+> One hundred and eleven dingoes were live captured and released between April 2008 and April 2010 and collars housing a GPS data logger and a VHF transmitter (Sirtrack, Havelock North, New Zealand and Bluesky Telemetry, Aberfeldy, Scotland) were fitted to a sample of 23 adults. Both male and female dingoes were collared, but only if they weighed more than 20 times the weight of the collar. Collar weight also limited the sampling period so, to ensure that dingoes were tracked under all seasonal conditions, collaring was staggered throughout the study period. In doing so, we sampled dingoes in as many areas as possible along a latitudinal transect between DBS and Mt Davidson (Figure 1) whilst ensuring replicates of both males and females in the sampled areas where GPS fixes (locations logged and stored as longitude- latitude co-ordinates) had been recovered from retrieved collars. The GPS unit on every collar was programmed to estimate a fix each hour, with sampling rates based on battery-life calculations. Seven collars suffered mechanical failures and did not return any data, and three were not found, but the remainder logged GPS information for up to 10 months at a time. Data from the collars included an Horizontal Dilution Of Position (HDOP) value as well as the number of satellites used to calculate each fix. The HDOP was used to determine a Maximum Allowable Error (MAE) of fix accuracy by multiplying the HDOP value by the accuracy of the GPS device, which was 2.5 m [24]. Fixes with an HDOP value > 8 were excluded to balance the number of usable fixes against positional accuracy, yielding a MAE of 40 m.
+
+From Newsome et al. [-@Newsome2013-sw]
+
+![From Newsome et al. [-@Newsome2013-sw].](images/data_table.png)
+
+
+## Previous research with this data
+
+[@Newsome2013-sw]
+- Newsome, T. M., Ballard, G.-A., Dickman, C. R., Fleming, P. J. S., & van de Ven, R. (2013). **Home range, activity and sociality of a top predator, the dingo: a test of the Resource Dispersion Hypothesis**. Ecography, 36(8), 914–925. https://doi.org/10.1111/j.1600-0587.2013.00056.x
+
+[@Newsome2013-ya]
+- Newsome, T. M., Ballard, G.-A., Dickman, C. R., Fleming, P. J. S., & Howden, C. (2013). **Anthropogenic resource subsidies determine space use by Australian arid zone dingoes: an improved resource selection modelling approach**. PloS One, 8(5), e63931. https://doi.org/10.1371/journal.pone.0063931
 
 
 # References

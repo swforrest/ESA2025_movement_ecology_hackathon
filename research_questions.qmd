@@ -51,7 +51,7 @@ Some suggestions are:
 - Do they select for linear features such as roads?
 - Does their movement and habitat selection differ between mine and non-mine sites?
 
-### Methods
+#### Methods
 - Step selection functions (SSFs) [@Fortin2005-zw; @Thurfjell2014-gq; @Signer2019-fi]
 
 

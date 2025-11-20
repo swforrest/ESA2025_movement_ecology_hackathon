@@ -32,6 +32,25 @@ abstract: |
 
 ---
 
-Here we have resources and links for common movement ecology methods that you might want to use. Click the tabs on the left to navigate between methods.
+Here we have resources and links for common movement ecology methods that you might want to use. 
 
-The [General Resources](methods_scripts/general_resources.qmd) tab contains links to general resources that are useful for many movement ecology methods, such as books and review papers. 
+**<<< Click the tabs to the left to get information and resources for specific methods.**
+
+Below are some general resources, such as books and review papers, that give an overview of movement ecology methods and concepts.
+
+## Books
+
+### Techniques and Concepts in Movement Ecology: With applications in R 
+*Authors:* E. Gurarie, N. Barbour, O. Couriot, others.
+
+This book is still being developed, but it gives an excellent overview of animal movement and statistical concepts. It is freely accessible online at <https://eligurarie.github.io/MovementEcologyBook/>.
+
+## Review papers
+
+
+
+
+# References
+
+::: {#refs}
+:::
