@@ -47,3 +47,85 @@ Bracis, C., Bildstein, K. L., & Mueller, T. (2018). **Revisitation analysis unco
 Campbell, H. A., Loewensteiner, D. A., Murphy, B. P., Pittard, S., & McMahon, C. R. (2020). **Seasonal movements and site utilisation by Asian water buffalo (Bubalus bubalis) in tropical savannas and floodplains of northern Australia**. Wildlife Research , 48(3), 230–239. https://doi.org/10.1071/WR20070
 
 
+# Getting started
+
+## Load packages
+
+```{r}
+
+# install.packages("recurse")
+
+library(tidyverse)
+library(sf)
+library(move)
+library(recurse)
+
+```
+
+## Load data
+
+```{r}
+
+### Load raw data
+dingo_data <- read_csv("../data/tanami_collars.csv") %>% filter(x > 0)
+dingo_data_sf <- st_as_sf(dingo_data, coords = c("x", "y"), crs = 4326)
+
+# reproject the data into a projected CRS (UTM zone 52)
+dingo_data_sf <- st_transform(dingo_data_sf, crs = 28352)
+
+# convert back to dataframe
+dingo_data <- dingo_data_sf %>%
+  mutate(x = st_coordinates(geometry)[,1],
+         y = st_coordinates(geometry)[,2]) %>%
+  st_set_geometry(NULL)
+
+# create a timestamp column
+dingo_data$timestamp <- as.POSIXct(paste(dingo_data$gmt_date, dingo_data$gmt_time), 
+                                   format = "%d/%m/%Y %H:%M:%S",
+                                   tz = "UTC")
+
+# convert to local time
+dingo_data$timestamp <- with_tz(dingo_data$timestamp, tzone = "Australia/Darwin")
+
+```
+
+## Recurse analysis
+
+```{r}
+
+# select columns for recurse
+dingo_recurse <- dingo_data %>% 
+  mutate(id = dogname,
+         t = timestamp) %>%
+  dplyr::select("x", "y", "timestamp", "id") 
+
+# convert to dataframe
+dingo_recurse <- as.data.frame(dingo_recurse)
+
+# calculate revisitations 
+dingo_recurse_object <- getRecursions(dingo_recurse, radius = 500, 
+                                     timeunits = "hours") 
+
+# extract the revisitation stats
+revisit_stats <- dingo_recurse_object$revisitStats
+
+```
+
+### Plot revisitation stats
+
+```{r}
+
+# plot the revisitations
+plot(dingo_recurse_object, dingo_recurse)
+
+hist(revisit_stats$timeInside[revisit_stats$timeInside < 100], 
+     breaks = 100,
+     main = "Time inside (hours)")
+
+hist(revisit_stats$timeSinceLastVisit[revisit_stats$timeSinceLastVisit < 1000], 
+     breaks = 100,
+     main = "Time since last visit (hours)")
+
+```
+
+

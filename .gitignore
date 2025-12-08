@@ -4,6 +4,7 @@ qgis/
 toms_layers/
 # Landsat NDVI layer - too big for Git
 Landsat5_meanNDVI_2008_2010.tif 
+team_outcomes/
 
 # History files
 .Rhistory

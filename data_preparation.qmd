@@ -52,6 +52,15 @@ library(amt)
 dingo_data <- read_csv("data/tanami_collars.csv") %>% filter(x > 0)
 dingo_data_sf <- st_as_sf(dingo_data, coords = c("x", "y"), crs = 4326)
 
+# reproject the data into a projected CRS (UTM zone 52)
+dingo_data_sf <- st_transform(dingo_data_sf, crs = 28352)
+
+# convert back to dataframe
+dingo_data <- dingo_data_sf %>%
+  mutate(x = st_coordinates(geometry)[,1],
+         y = st_coordinates(geometry)[,2]) %>%
+  st_set_geometry(NULL)
+
 ```
 
 # Load shapefiles
@@ -90,7 +99,7 @@ In this chunk we create a function that can take a GPS dataset, pull out the loc
 
 # Function to create rectangle from coordinate bounds
 create_rectangle_shapefile <- function(df, x_col = "x", y_col = "y", 
-                                       buffer = 0.05, crs = 4326, 
+                                       buffer = 0.05, input_crs = 4326, 
                                        output_path = "rectangle") {
   
   # Calculate bounds with buffer
@@ -115,7 +124,7 @@ create_rectangle_shapefile <- function(df, x_col = "x", y_col = "y",
   rectangle_sf <- st_sf(
     id = 1,
     area = st_area(rectangle_poly),
-    geometry = st_sfc(rectangle_poly, crs = crs)
+    geometry = st_sfc(rectangle_poly, crs = input_crs)
   )
   
   rectangle_projected <- st_transform(rectangle_sf, crs = 4326) 
@@ -143,13 +152,15 @@ create_rectangle_shapefile <- function(df, x_col = "x", y_col = "y",
 
 ```{r}
 
+
+
 # Create the rectangle shapefile
 dingo_extent <- create_rectangle_shapefile(
   df = dingo_data,
   x_col = "x",             # column name for easting/longitude
   y_col = "y",             # column name for northing/latitude
-  buffer = 0.1,           # buffer distance in coordinate units (degrees or m)
-  crs = 4326,              # coordinate reference system of GPS locations (will output in 4326)
+  buffer = 0.1,            # buffer distance in coordinate units (degrees or m)
+  crs = 28352,             # coordinate reference system of GPS locations (will output in 4326)
   output_path = "spatial_layers/extent/dingo_extent" # without extension
 )
 
@@ -162,6 +173,8 @@ dingo_extent_sf <- st_geometry(dingo_extent)
 # Optional: Add your original points to the plot
 plot(dingo_extent_sf, main = "Rectangle with Original Points")
 plot(st_geometry(dingo_data_sf), add = TRUE, col = "red")
+
+st_transform(dingo_extent_sf, crs = 4326)
 
 ```
 

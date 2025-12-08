@@ -37,6 +37,11 @@ abstract: |
 - `ctmm` - mostly for AKDE home range estimation [@Calabrese2016-ns]
 - `amt` - this package was originally for SSFs but has recent functionality for home ranges [@Signer2021-es]
 
+## Tutorials and resources
+
+`akde` **Guide to autocorrelated home range estimation:** A step-by-step R tutorial using the ‘ctmm’ package
+- <https://ecoisilva.github.io/AKDE_minireview/code/AKDE_R-tutorial.html>
+
 ## Home range approaches
 
 #### Kernel density estimation (KDE)
@@ -59,6 +64,15 @@ Kranstauber, B., Kays, R., Lapoint, S. D., Wikelski, M., & Safi, K. (2012). **A 
 
 **Range vs occurrence distributions**
 Alston, J. M., Fleming, C. H., Noonan, M. J., Tucker, M. A., Silva, I., Folta, C., Akre, T. S. B., Ali, A. H., Belant, J. L., Beyer, D., Blaum, N., Böhning-Gaese, K., de Paula, R. C., Dekker, J., Drescher-Lehman, J., Farwig, N., Fichtel, C., Fischer, C., Ford, A. T., … Calabrese, J. M. (2022). **Clarifying space use concepts in ecology: range vs. occurrence distributions**. In bioRxiv (p. 2022.09.29.509951). https://doi.org/10.1101/2022.09.29.509951 
+
+
+# Getting started
+
+```{r}
+
+
+
+```
 
 
 # References
